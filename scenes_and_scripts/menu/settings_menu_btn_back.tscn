@@ -5,4 +5,4 @@
 [node name="SettingsMenuBtnBack" instance=ExtResource( 1 )]
 
 [node name="Label" parent="btn" index="0"]
-text = "VOLVER"
+text = "MENU"

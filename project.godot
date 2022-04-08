@@ -24,6 +24,11 @@ config/name="Multiplicator"
 run/main_scene="res://main.tscn"
 config/icon="res://assets/images/foggy_png_shader.png"
 
+[autoload]
+
+SCENE_MANAGER="*res://scenes_and_scripts/singletons/scene_manager.gd"
+GLOBAL_VALUES="*res://scenes_and_scripts/singletons/global_values.gd"
+
 [display]
 
 window/size/width=360

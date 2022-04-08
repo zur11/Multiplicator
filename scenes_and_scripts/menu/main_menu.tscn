@@ -1,19 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes_and_scripts/menu/main_menu_btn_game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes_and_scripts/menu/main_menu_btn_settings.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes_and_scripts/menu/main_menu_btn_quit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes_and_scripts/menu/main_menu.gd" type="Script" id=4]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_left = 112.0
 margin_top = 196.0
 margin_right = 256.0
 margin_bottom = 396.0
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="MenuVContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 144.0

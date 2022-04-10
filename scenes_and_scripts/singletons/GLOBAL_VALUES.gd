@@ -11,17 +11,18 @@ const POSIBLE_BACKGROUNDS = [
 
 onready var user_config_file = File.new()
 onready var user_config_file_path = "user://config.save"
+
 onready var selected_background = read_selected_background_from_file() setget selected_background_set
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	pass 
 
 
 func selected_background_set(new_value):
 	write_selected_background_to_file(new_value)
 	emit_signal("BackgroundChanged",new_value[1])
 	selected_background = new_value
+	print(new_value)
 
 func write_selected_background_to_file(selected_background_to_write):
 	user_config_file.open(user_config_file_path, File.WRITE)
@@ -35,6 +36,6 @@ func read_selected_background_from_file():
 		return_value = user_config_file.get_var()
 		user_config_file.close()
 	else:
-		return_value = PARALLAX_BACKGROUND
+		return_value = FOGGY_BACKGROUND
 	return return_value
 

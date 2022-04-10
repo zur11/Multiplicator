@@ -26,8 +26,8 @@ config/icon="res://assets/images/foggy_png_shader.png"
 
 [autoload]
 
-SCENE_MANAGER="*res://scenes_and_scripts/singletons/scene_manager.gd"
-GLOBAL_VALUES="*res://scenes_and_scripts/singletons/global_values.gd"
+GlobalValues="*res://scenes_and_scripts/singletons/global_values.gd"
+SceneManager="*res://scenes_and_scripts/singletons/scene_manager.gd"
 
 [display]
 

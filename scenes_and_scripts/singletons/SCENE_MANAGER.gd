@@ -1,7 +1,7 @@
 extends Node2D
 
 
-func goToScene(sceneToGo: PackedScene, mainScenePath:String = "/root/Main/Control/MainContainer"):
+func goToScene(sceneToGo: PackedScene, mainScenePath:String = "/root/Main/MainContainer"):
 
 	var mainContainer = get_node(mainScenePath)
 	var previousScene

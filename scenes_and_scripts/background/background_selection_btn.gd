@@ -5,7 +5,6 @@ func _ready():
 	
 	#create items based on posible backgrounds declared in Global Values
 	for ii in GlobalValues.POSIBLE_BACKGROUNDS.size():
-		print(ii)
 		self.add_item(GlobalValues.POSIBLE_BACKGROUNDS[ii][0] + " Background",ii)
 	
 	#Select the current selected backgraound o the button 

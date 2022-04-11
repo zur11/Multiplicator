@@ -28,6 +28,7 @@ config/icon="res://assets/images/foggy_png_shader.png"
 
 GlobalValues="*res://scenes_and_scripts/singletons/global_values.gd"
 SceneManager="*res://scenes_and_scripts/singletons/scene_manager.gd"
+Transition="*res://scenes_and_scripts/singletons/transition.tscn"
 
 [display]
 

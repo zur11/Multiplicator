@@ -8,4 +8,4 @@ func _ready():
 		print("Failure!")
 
 func goToMenu():
-	SceneManager.goToScene(menuScene)
+	Transition.changeSceneLoc(menuScene)

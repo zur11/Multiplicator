@@ -11,3 +11,5 @@ func goToScene(sceneToGo: PackedScene, mainScenePath:String = "/root/Main/MainCo
 		previousScene.call_deferred('free')
 	var sceneToGoInstance = sceneToGo.instance()
 	mainContainer.add_child(sceneToGoInstance)
+
+

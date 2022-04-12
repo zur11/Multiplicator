@@ -9,10 +9,12 @@ const POSIBLE_BACKGROUNDS = [
 	PARALLAX_BACKGROUND
 	]
 
+onready var answerOptionsArrange = generateAllAnswerOptions()
+
 onready var user_config_file = File.new()
 onready var user_config_file_path = "user://config.save"
-
 onready var selected_background = read_selected_background_from_file() setget selected_background_set
+
 
 func _ready():
 	pass 
@@ -38,4 +40,13 @@ func read_selected_background_from_file():
 	else:
 		return_value = FOGGY_BACKGROUND
 	return return_value
+
+func generateAllAnswerOptions():
+	var answerOptionsInnerArrange = []
+	for ii in range(11):
+		for jj in range(ii, 11):
+			if !answerOptionsInnerArrange.has(ii*jj):
+				answerOptionsInnerArrange.append(ii*jj)
+	print(answerOptionsInnerArrange.size())
+	return answerOptionsInnerArrange
 

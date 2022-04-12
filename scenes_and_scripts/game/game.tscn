@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes_and_scripts/global_objects/back_to_menu_btn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes_and_scripts/game/option_btn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes_and_scripts/game/game.gd" type="Script" id=3]
+
+[node name="Game" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="GameVContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 344.0
+margin_bottom = 624.0
+
+[node name="ScoreHContainer" type="HBoxContainer" parent="MarginContainer/GameVContainer"]
+margin_right = 344.0
+margin_bottom = 28.0
+
+[node name="ScorePercent" type="ProgressBar" parent="MarginContainer/GameVContainer/ScoreHContainer"]
+margin_right = 273.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="TotalScoreContainer" type="PanelContainer" parent="MarginContainer/GameVContainer/ScoreHContainer"]
+margin_left = 277.0
+margin_right = 344.0
+margin_bottom = 28.0
+
+[node name="TotalScoreRect" type="ColorRect" parent="MarginContainer/GameVContainer/ScoreHContainer/TotalScoreContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 60.0
+margin_bottom = 21.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="TotalScoreLabel" type="Label" parent="MarginContainer/GameVContainer/ScoreHContainer/TotalScoreContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 60.0
+margin_bottom = 21.0
+text = "100/100"
+align = 1
+valign = 1
+
+[node name="QuestionContainer" type="MarginContainer" parent="MarginContainer/GameVContainer"]
+margin_top = 154.0
+margin_right = 344.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="QuestionRect" type="ColorRect" parent="MarginContainer/GameVContainer/QuestionContainer"]
+margin_right = 344.0
+margin_bottom = 31.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="QuestionLabel" type="Label" parent="MarginContainer/GameVContainer/QuestionContainer"]
+margin_right = 344.0
+margin_bottom = 31.0
+text = "CUANTO ES: 
+ X * Y?"
+align = 1
+valign = 1
+
+[node name="Options" type="MarginContainer" parent="MarginContainer/GameVContainer"]
+margin_top = 312.0
+margin_right = 344.0
+margin_bottom = 556.0
+size_flags_vertical = 4
+
+[node name="OptionsHContainer" type="HBoxContainer" parent="MarginContainer/GameVContainer/Options"]
+margin_right = 344.0
+margin_bottom = 244.0
+alignment = 1
+
+[node name="OptionsVContainer" type="VBoxContainer" parent="MarginContainer/GameVContainer/Options/OptionsHContainer"]
+margin_right = 170.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="OptionBtn1" parent="MarginContainer/GameVContainer/Options/OptionsHContainer/OptionsVContainer" instance=ExtResource( 2 )]
+margin_left = 25.0
+margin_right = 145.0
+size_flags_horizontal = 4
+
+[node name="OptionBtn2" parent="MarginContainer/GameVContainer/Options/OptionsHContainer/OptionsVContainer" instance=ExtResource( 2 )]
+margin_left = 25.0
+margin_top = 124.0
+margin_right = 145.0
+margin_bottom = 244.0
+focus_mode = 2
+size_flags_horizontal = 4
+
+[node name="OptionsVContainer2" type="VBoxContainer" parent="MarginContainer/GameVContainer/Options/OptionsHContainer"]
+margin_left = 174.0
+margin_right = 344.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+
+[node name="OptionBtn3" parent="MarginContainer/GameVContainer/Options/OptionsHContainer/OptionsVContainer2" instance=ExtResource( 2 )]
+margin_left = 25.0
+margin_right = 145.0
+focus_mode = 2
+size_flags_horizontal = 4
+
+[node name="OptionBtn4" parent="MarginContainer/GameVContainer/Options/OptionsHContainer/OptionsVContainer2" instance=ExtResource( 2 )]
+margin_left = 25.0
+margin_top = 124.0
+margin_right = 145.0
+margin_bottom = 244.0
+focus_mode = 2
+size_flags_horizontal = 4
+
+[node name="BackToMenuBtn" parent="MarginContainer/GameVContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+margin_top = 560.0
+margin_right = 344.0
+margin_bottom = 624.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MarginContainer/GameVContainer"]
